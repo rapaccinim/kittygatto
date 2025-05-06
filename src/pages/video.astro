@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Product Video">
+  <div class="video-page">
+    <div class="container">
+      <h1>KittyGatto in Action</h1>
+      <p class="description">Watch our product demonstration to see KittyGatto's innovative features:</p>
+      
+      <div class="video-container">
+        <!-- Replace the YouTube embed URL with your actual video when available -->
+        <iframe 
+          width="800" 
+          height="450" 
+          src="https://youtube.com/embed/ffGlcJTpf8E?si=gN4E2y3zCSxbzuDF" 
+          title="KittyGatto Product Demo" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+      <div class="video-specs">
+        <h2>Featured Technical Specifications</h2>
+        <ul class="specs-list">
+          <li>
+            <span class="spec-title">Low-power E-ink Display</span>
+            <span class="spec-description">Shows vocabulary words and simple illustrations without eye strain</span>
+          </li>
+          <li>
+            <span class="spec-title">Dual High-clarity Audio System</span>
+            <span class="spec-description">Crystal clear pronunciation in both languages</span>
+          </li>
+          <li>
+            <span class="spec-title">Curated Language Database</span>
+            <span class="spec-description">Organized by difficulty levels, categories, and language pairs</span>
+          </li>
+          <li>
+            <span class="spec-title">On-device AI Speech Recognition</span>
+            <span class="spec-description">Pro version feature - optimized for children's voices</span>
+          </li>
+          <li>
+            <span class="spec-title">BLE Connectivity</span>
+            <span class="spec-description">For parental controls via companion app</span>
+          </li>
+          <li>
+            <span class="spec-title">Long Battery Life</span>
+            <span class="spec-description">2+ weeks on a single charge</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="video-description">
+        <h2>About KittyGatto</h2>
+        <p>
+          KittyGatto is an innovative bilingual learning device designed specifically for children ages 2-8, combining tactile learning with gentle technology.
+        </p>
+        <p>
+          Unlike attention-grabbing tablets and smartphones, KittyGatto features a child-friendly e-ink display without harmful backlighting or flashing elements, showing vocabulary words and simple illustrations that won't strain young eyes.
+        </p>
+        <p>
+          With intuitive physical buttons, children can independently explore languages - pressing the random word button displays vocabulary, while language selection buttons provide high-clarity pronunciation in either language, creating direct connections between language pairs.
+        </p>
+        <p>
+          The Pro version includes advanced speech recognition optimized for children's voices, providing personalized pronunciation feedback with all processing happening securely on-device for complete privacy.
+        </p>
+        <p>
+          Perfect for the 35% of European and 22% of US households raising multilingual children, KittyGatto provides screen-free, independent language exposure that complements rather than replaces parental interaction.
+        </p>
+      </div>
+      
+      <div class="call-to-action">
+        <a href="/#contact" class="btn primary">Join Our Waiting List</a>
+        <a href="/" class="btn secondary">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .video-page {
+      padding: 4rem 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .description {
+      text-align: center;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-container::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    
+    .video-specs, .video-description {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--dark-color);
+      margin-bottom: 1.5rem;
+    }
+    .specs-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+    .specs-list li {
+      background-color: #f9f9f9;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .spec-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .video-description p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    
+    .call-to-action {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .btn.primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .btn.secondary {
+      background-color: white;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 850px) {
+      .specs-list {
+        grid-template-columns: 1fr;
+      }
+      .video-container {
+        max-width: 100%;
+      }
+      .call-to-action {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</Layout>

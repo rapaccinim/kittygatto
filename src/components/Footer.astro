@@ -1,0 +1,129 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <a href="/" class="footer-logo">Kitty<span>Gatto</span></a>
+        <p class="tagline">Revolutionizing bilingual learning</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/video">Video</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-group">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; {currentYear} KittyGatto. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .footer-logo-section {
+    flex: 1;
+  }
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  .footer-logo span {
+    color: var(--secondary-color);
+  }
+  .tagline {
+    opacity: 0.8;
+    max-width: 250px;
+  }
+  .footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+  }
+  .link-group h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  .link-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .link-group li {
+    margin-bottom: 0.5rem;
+  }
+  .link-group a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  .link-group a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,144 @@
+---
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | KittyGatto</title>
+    <meta name="description" content="KittyGatto - Bilingual learning tool for children ages 2-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #FF6B6B;
+        --secondary-color: #4ECDC4;
+        --dark-color: #292F36;
+        --light-color: #F7FFF7;
+        --accent-color: #FFE66D;
+      }
+      body {
+        font-family: 'Nunito', sans-serif;
+        line-height: 1.6;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+	  main {
+        width: 100%;
+      }
+      
+      main > section,
+      main > .hero {
+        width: 100%;
+      }
+      .header {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+      .logo span {
+        color: var(--secondary-color);
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+      .nav-links a {
+        color: var(--dark-color);
+        font-weight: 600;
+      }
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+      .footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .copyright {
+        font-size: 0.9rem;
+      }
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+      @media (max-width: 768px) {
+        .header-content, .footer-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .nav-links {
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo">Kitty<span>Gatto</span></a>
+          <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/video">Video</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="copyright">
+            &copy; {new Date().getFullYear()} KittyGatto. All rights reserved.
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
