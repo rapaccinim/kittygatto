@@ -163,23 +163,15 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
     <div class="container">
       <h2>Join Our Waiting List</h2>
       <p>Be the first to know when KittyGatto launches!</p>
-      <form class="contact-form">
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <select id="interest" name="interest">
-            <option value="">I'm interested in...</option>
-            <option value="standard">KittyGatto Standard</option>
-            <option value="pro">KittyGatto Pro</option>
-            <option value="both">Both Versions</option>
-          </select>
-        </div>
-        <button type="submit" class="btn primary">Join Waiting List</button>
-      </form>
+      <div class="tally-custom-form">
+        <iframe data-tally-src="https://tally.so/embed/3XgYbV?alignLeft=1&hideTitle=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="536"
+          title="KittyGatto Waiting List"
+        >
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -365,19 +357,10 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
     .contact h2 {
       color: white;
     }
-    .contact-form {
+
+    .tally-custom-form {
       margin: 0 auto;
-    }
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    input, select {
-      width: 80%;
       max-width: 500px;
-      padding: 0.8rem 1rem;
-      border-radius: 5px;
-      border: none;
-      font-family: 'Nunito', sans-serif;
     }
     
     @media (max-width: 768px) {
@@ -401,6 +384,12 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
       .hero-image img, .solution-image img, .pro-image img {
         max-width: 90%;
       }
+      .tally-custom-form {
+        max-width: 90%;
+      }
+  
     }
   </style>
 </Layout>
+
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
