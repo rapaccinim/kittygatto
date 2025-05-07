@@ -22,8 +22,6 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
         <Image
           src={heroImg}
           alt="KittyGatto hero image with features - Bilingual Fun"
-          width="500"
-          height="400"
         />
       </div>
     </div>
@@ -67,8 +65,6 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
           <Image
             src={featureImg}
             alt="KittyGatto features - Bilingual Fun"
-            width="500"
-            height="400"
           />
         </div>
         <div class="solution-text">
@@ -137,8 +133,6 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
           <Image
             src={proImg}
             alt="KittyGatto pro features - Bilingual Fun"
-            width="500"
-            height="400"
           />
         </div>
       </div>
@@ -213,7 +207,7 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
       flex: 1;
     }
     .hero-image img {
-      max-width: 100%;
+      max-width: 500px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -291,6 +285,11 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
     }
     .problem-stats, .solution-image, .pro-image {
       flex: 1;
+    }
+
+    .solution-image img, .pro-image img {
+      max-width: 500px;
+      height: auto;
     }
     .problem-stats {
       display: flex;
@@ -390,6 +389,7 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
       }
       .hero-image {
         order: -1;
+        text-align: center;
       }
       h1 {
         font-size: 2.5rem;
@@ -397,6 +397,9 @@ import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
       .features-grid,
       .testimonials-grid {
         grid-template-columns: 1fr;
+      }
+      .hero-image img, .solution-image img, .pro-image img {
+        max-width: 90%;
       }
     }
   </style>
