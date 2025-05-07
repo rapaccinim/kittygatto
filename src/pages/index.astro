@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/kittygatto-hero-picture.webp';
+import featureImg from '../assets/kittygatto-features-bilingual-fun.webp';
+import proImg from '../assets/kittygatto-pro-bilingual-fun.webp';
 ---
 
 <Layout title="Home">
@@ -15,7 +19,12 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
       <div class="hero-image">
-        <img src="https://via.placeholder.com/500x400?text=KittyGatto+Device" alt="KittyGatto Device" width="500" height="400" />
+        <Image
+          src={heroImg}
+          alt="KittyGatto hero image with features - Bilingual Fun"
+          width="500"
+          height="400"
+        />
       </div>
     </div>
   </div>
@@ -55,7 +64,12 @@ import Layout from '../layouts/Layout.astro';
       <h2>Our Solution</h2>
       <div class="solution-content">
         <div class="solution-image">
-          <img src="https://via.placeholder.com/450x350?text=KittyGatto+Features" alt="KittyGatto Features" width="450" height="350" />
+          <Image
+            src={featureImg}
+            alt="KittyGatto features - Bilingual Fun"
+            width="500"
+            height="400"
+          />
         </div>
         <div class="solution-text">
           <p>KittyGatto combines tactile buttons, a gentle low-power e-ink display, and high-clarity audio in an adorable cat-shaped device that children can use independently.</p>
@@ -120,7 +134,12 @@ import Layout from '../layouts/Layout.astro';
           <a href="#contact" class="btn primary">Pre-order KittyGatto Pro</a>
         </div>
         <div class="pro-image">
-          <img src="https://via.placeholder.com/400x300?text=KittyGatto+Pro" alt="KittyGatto Pro" width="400" height="300" />
+          <Image
+            src={proImg}
+            alt="KittyGatto pro features - Bilingual Fun"
+            width="500"
+            height="400"
+          />
         </div>
       </div>
     </div>
